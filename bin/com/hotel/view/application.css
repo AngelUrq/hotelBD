@@ -1,0 +1,6 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.fondo{
+	-fx-background-image:url("../../../../resources/img/fondo.png");
+	/*-fx-background-color: BLACK;*/
+}

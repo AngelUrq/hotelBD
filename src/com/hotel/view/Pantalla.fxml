@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotel.view.PantallaController">
+   <children>
+      <Pane id="fondo" fx:id="fondo" prefHeight="500.0" prefWidth="500.0" styleClass="fondo" stylesheets="@application.css">
+         <children>
+            <Label layoutX="176.0" layoutY="22.0" prefHeight="62.0" prefWidth="242.0" text="HOTEL" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Monotype Corsiva" size="46.0" />
+               </font>
+            </Label>
+            <ComboBox id="cb_entidad" fx:id="cb_entidad" layoutX="72.0" layoutY="108.0" prefWidth="150.0" promptText="Seleccione" />
+            <RadioButton id="rb_registrar" fx:id="rb_registrar" layoutX="310.0" layoutY="100.0" mnemonicParsing="false" text="Registrar" textFill="#f8f8f8">
+               <toggleGroup>
+                  <ToggleGroup fx:id="uno" />
+               </toggleGroup></RadioButton>
+            <RadioButton id="rb_listar" fx:id="rb_listar" layoutX="310.0" layoutY="134.0" mnemonicParsing="false" text="Listar" textFill="#f5efef" toggleGroup="$uno" />
+            <RadioButton id="rb_buscar" fx:id="rb_buscar" layoutX="310.0" layoutY="165.0" mnemonicParsing="false" text="Buscar" textFill="#fcf6f6" toggleGroup="$uno" />
+            <RadioButton id="rb_actualizar" fx:id="rb_actualizar" layoutX="310.0" layoutY="199.0" mnemonicParsing="false" text="Actualizar" textFill="WHITE" toggleGroup="$uno" />
+            <Button id="bt_ejecutar" fx:id="bt_ejecutar" layoutX="325.0" layoutY="238.0" mnemonicParsing="false" onAction="#botonEjecutar" prefHeight="17.0" prefWidth="68.0" stylesheets="@application.css" text="Ejecutar" />
+            <DatePicker id="dp_calendarioL" fx:id="dp_calendarioL" editable="false" layoutX="72.0" layoutY="153.0" prefHeight="25.0" prefWidth="150.0" promptText="Fecha Llegada" />
+            <DatePicker id="dp_calendarioP" fx:id="dp_calendarioP" layoutX="72.0" layoutY="178.0" prefHeight="25.0" prefWidth="150.0" promptText="Fecha Partida" />
+            <Button fx:id="button" layoutX="142.0" layoutY="450.0" mnemonicParsing="false" onAction="#botonHospedar" prefHeight="25.0" prefWidth="68.0" text="Hospedar" />
+            <ScrollPane layoutX="70.0" layoutY="284.0" prefHeight="150.0" prefWidth="344.0">
+               <content>
+                  <Label id="lb_campo" fx:id="lb_campo" alignment="TOP_LEFT" prefHeight="3000.0" prefWidth="3000.0" style="-fx-background-color: black;" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+               </content>
+            </ScrollPane>
+            <ProgressBar id="progressBar" fx:id="progressBar" layoutX="70.0" layoutY="229.0" prefHeight="18.0" prefWidth="218.0" progress="0.0" />
+            <Button layoutX="288.0" layoutY="450.0" mnemonicParsing="false" onAction="#emitirFactura" text="Factura" />
+         </children></Pane>
+   </children>
+</AnchorPane>
